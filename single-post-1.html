@@ -34,16 +34,11 @@
 			<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
 
 			<ul class="main-menu visible-on-click" id="main-menu">
-				<li><a href="#">Home</a></li>
-			</ul><!-- main-menu -->
-
-			<div class="src-area">
-				<form>
-					<button class="src-btn" type="submit"><i class="ion-ios-search-strong"></i></button>
-					<input class="src-input" type="text" placeholder="Type of search">
-				</form>
-			</div>
-
+				<li><a href="index.html">Главная</a>
+                	<a href="https://www.facebook.com/VeriusKaren" target="_blank" >Facebook</a>
+            	</li>
+              
+			</ul>
 		</div><!-- conatiner -->
 	</header>
 
@@ -53,7 +48,23 @@
 			<h1 class="title display-table-cell"><b>DESIGN</b></h1>
 		</div>
 	</div> <!-- slider --> 
+		
+		<div id="bg_popup">
+  <div id="popup">
+<h1>BMW или Mercedes</h1>
+<p id="modal"><a href="" ><img class="modall" src="images/bmw.png" ></a>&nbsp;&nbsp;<a href="#"><img class="modall" src="images/mers.png" ></a>
+<p><!-- <button >BMW</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Mercedes</button> --></p>
+</p>
 
+<!-- <a class="close" href="#" title="Закрыть" onclick="document.getElementById('bg_popup').style.display='none'; return false;">X</a> -->
+</div>
+</div> 
+		<div class="row">
+			<div class="wrapper">
+		  		<div class="box"><H1 align="center">Here is ad</H1></div>
+			</div>
+		</div>
+	</br></br>	
 	<section class="post-area section">
 		<div class="container">
 
@@ -133,7 +144,11 @@
 						</div>
 
 						<div class="post-footer post-info">
-
+							<div class="row">
+			<div class="wrapper">
+		  		<div class="box"><H1 align="center">Here is ad</H1></div>
+			</div>
+		</div>
 							<!--<div class="left-area">
 								<a class="avatar" href="#"><img src="images/avatar-1-120x120.jpg" alt="Profile Image"></a>
 							</div>
@@ -149,42 +164,34 @@
 					</div><!-- main-post -->
 				</div><!-- col-lg-8 col-md-12 -->
 
-				<!-- <div class="col-lg-4 col-md-12 no-left-padding">
+				 <div class="col-lg-4 col-md-12 no-left-padding">
 
 					<div class="single-post info-area">
 
 						<div class="sidebar-area about-area">
-							<h4 class="title"><b>ABOUT BONA</b></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-								ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
-								Ut enim ad minim veniam</p>
+							<div class="row">
+										<div class="wrapper">
+									  		<div class="box"><H1 align="center">Here is ad</H1></div>
+										</div>
+							</div>
 						</div>
 
-						<div class="sidebar-area subscribe-area">
+						<div id="fixblock" class="sidebar-area subscribe-area">
 
-							<h4 class="title"><b>SUBSCRIBE</b></h4>
-							<div class="input-area">
-								<form>
-									<input class="email-input" type="text" placeholder="Enter your email">
-									<button class="submit-btn" type="submit"><i class="icon ion-ios-email-outline"></i></button>
-								</form>
-							</div>
-
+							<div class="row">
+			<div class="wrapper">
+		  		<div class="box"><H1 align="center">Here is ad</H1></div>
+			</div>
+		</div>
 						</div>
 
 						<div class="tag-area">
 
-							<h4 class="title"><b>TAG CLOUD</b></h4>
-							<ul>
-								<li><a href="#">Manual</a></li>
-								<li><a href="#">Liberty</a></li>
-								<li><a href="#">Recomendation</a></li>
-								<li><a href="#">Interpritation</a></li>
-								<li><a href="#">Manual</a></li>
-								<li><a href="#">Liberty</a></li>
-								<li><a href="#">Recomendation</a></li>
-								<li><a href="#">Interpritation</a></li>
-							</ul>
+							<div class="row">
+			<div class="wrapper">
+		  		<div class="box"><H1 align="center">Here is ad</H1></div>
+			</div>
+		</div>
 
 						</div>
 
@@ -405,10 +412,6 @@
 		</div>
 	</section> -->
 
-	<footer>
-
-		<div class="container">
-			<div class="row">
 
 				<!-- <div class="col-lg-4 col-md-6">
 					<div class="footer-section">
@@ -471,6 +474,28 @@
 	<script src="common-js/bootstrap.js"></script>
 
 	<script src="common-js/scripts.js"></script>
+	<script type="text/javascript">
+function getTopOffset(e) { 
+	var y = 0;
+	do { y += e.offsetTop; } while (e = e.offsetParent);
+	return y;
+}
+var block = document.getElementById('fixblock'); /* fixblock - значение атрибута id блока */
+if ( null != block ) {
+	var topPos = getTopOffset( block );
+	window.onscroll = function() {
+		var newcss = (topPos < window.pageYOffset) ? 
+			'top:20px; position: fixed;' : 'position:static;';
+		block.setAttribute( 'style', newcss );
+	}
+}
+</script>
+<script type="text/javascript">
+    var delay_popup = 100;
+    var close_time = 4555;
+    setTimeout("document.getElementById('bg_popup').style.display='block'", delay_popup);
+    setTimeout("document.getElementById('bg_popup').style.display='none'", close_time);
 
+</script>  	
 </body>
 </html>

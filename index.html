@@ -28,7 +28,22 @@
 	<link href="layout-1/css/responsive.css" rel="stylesheet">
 	
   </head>
-
+  <script type="text/javascript">
+function getTopOffset(e) { 
+	var y = 0;
+	do { y += e.offsetTop; } while (e = e.offsetParent);
+	return y;
+}
+var block = document.getElementById('fixblock'); /* fixblock - значение атрибута id блока */
+if ( null != block ) {
+	var topPos = getTopOffset( block );
+	window.onscroll = function() {
+		var newcss = (topPos < window.pageYOffset) ? 
+			'top:20px; position: fixed;' : 'position:static;';
+		block.setAttribute( 'style', newcss );
+	}
+}
+</script>
   <body>
 
     <!-- <header >
@@ -60,7 +75,8 @@
 
 			<ul class="main-menu visible-on-click" id="main-menu">
 				<li><a href="index.html">Главная</a>
-                <a href="https://www.facebook.com/VeriusKaren" target="_blank" >Facebook</a></li>
+                	<a href="https://www.facebook.com/VeriusKaren" target="_blank" >Facebook</a>
+            	</li>
               
 			</ul><!-- main-menu -->
 
@@ -90,81 +106,13 @@
 <!-- <a class="close" href="#" title="Закрыть" onclick="document.getElementById('bg_popup').style.display='none'; return false;">X</a> -->
 </div>
 </div>  
-<style type="text/css">
-	#bg_popup{
-background-color: rgba(0, 0, 0, 0.8);
-display: none;
-position: fixed;
-z-index: 99999;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-}
-
-.modall {
-	width: 100px;
-	height: 100px;
-
-}
-#popup {
-background: #fff;
-/*margin: 25% auto;*/
-/*left: 30%;*/
-padding: 5px 20px 13px 20px;
-/*border: 2px solid #1BA600;*/
-position: relative;
--webkit-box-shadow: 0px 0px 20px #000;
--moz-box-shadow: 0px 0px 20px #000;
-box-shadow: 0px 0px 20px #000;
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
-border-radius: 15px;
-text-align: center;
-}
-  
-/*.close{
-display:block;
-position:absolute;
-top:-12px;
-right:5px;
-width:25px;
-height:25px;
-line-height:28px;
-color:#fff;
-background:#1BA600;
-cursor:pointer;
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
--ms-border-radius: 15px;
--o-border-radius: 15px;
-border-radius: 15px;
--moz-box-shadow: 1px 1px 3px #000;
--webkit-box-shadow: 1px 1px 3px #000;
-box-shadow: 1px 1px 3px #000;
-}
-.close:hover {
-background-color:#f30;
-} */
-.wrapper {
-  width: 300px;
-  margin: 0 auto;
-}
-
-.box {
-  background: goldenrod;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 50%;
-  padding-bottom: 50%;
-}
-</style>
-
 <div class="row">
 	<div class="wrapper">
-  		<div class="box">Reklama</div>
+  		<div class="box"><H1 align="center">Here is ad</H1></div>
 	</div>
 </div>
+
+</br></br>
 <!-- <div class="slider"></div> --><!-- slider -->
 
 	<section class="blog-area section">
@@ -187,7 +135,7 @@ background-color:#f30;
 								<ul class="post-footer">
 									<!-- <li><a href="#"><i class="ion-heart"></i>57</a></li> -->
 									<!-- <li><a href="#"><i class="ion-chatbubble"></i>6</a></li> -->
-									<li><a href="#"><i class="ion-eye"></i>138</a></li>
+									<li><a ><i class="ion-eye"></i>138</a></li>
 								</ul>
 
 							</div><!-- blog-info -->
@@ -211,7 +159,7 @@ background-color:#f30;
 								<ul class="post-footer">
 									<!-- <li><a href="#"><i class="ion-heart"></i>57</a></li> -->
 									<!-- <li><a href="#"><i class="ion-chatbubble"></i>6</a></li> -->
-									<li><a href="#"><i class="ion-eye"></i>138</a></li>
+									<li><a ><i class="ion-eye"></i>138</a></li>
 								</ul>
 
 							</div><!-- blog-info -->
@@ -235,7 +183,7 @@ background-color:#f30;
 								<ul class="post-footer">
 									<!-- <li><a href="#"><i class="ion-heart"></i>57</a></li> -->
 									<!-- <li><a href="#"><i class="ion-chatbubble"></i>6</a></li> -->
-									<li><a href="#"><i class="ion-eye"></i>138</a></li>
+									<li><a ><i class="ion-eye"></i>138</a></li>
 								</ul>
 
 							</div><!-- blog-info -->
@@ -259,7 +207,7 @@ background-color:#f30;
 								<ul class="post-footer">
 									<!-- <li><a href="#"><i class="ion-heart"></i>57</a></li> -->
 									<!-- <li><a href="#"><i class="ion-chatbubble"></i>6</a></li> -->
-									<li><a href="#"><i class="ion-eye"></i>138</a></li>
+									<li><a ><i class="ion-eye"></i>138</a></li>
 								</ul>
 
 							</div><!-- blog-info -->
@@ -283,7 +231,7 @@ background-color:#f30;
 								<ul class="post-footer">
 									<!-- <li><a href="#"><i class="ion-heart"></i>57</a></li> -->
 									<!-- <li><a href="#"><i class="ion-chatbubble"></i>6</a></li> -->
-									<li><a href="#"><i class="ion-eye"></i>138</a></li>
+									<li><a ><i class="ion-eye"></i>138</a></li>
 								</ul>
 
 							</div><!-- blog-info -->
@@ -294,26 +242,15 @@ background-color:#f30;
 				<!-- ____________________________________________________ -->
 				<div class="col-lg-4 col-md-6">
 					<div class="card h-100">
-						<div class="single-post post-style-1">
+						<div class="single-post post-style-3">
 
-							<div class="blog-image"><img src="images/1.jpg" alt="Blog Image"></div>
-
-							<!-- <a class="avatar" href="#"><img src="images/icons8-team-355979.jpg" alt="Profile Image"></a> -->
-
-							<div class="blog-info">
-
-								<h4 class="title"><a href="single-post-1.html"><b>23 шокирующих фотографии о том, насколько много людей в Китае</b></a></h4>
-
-								<ul class="post-footer">
-									<!-- <li><a href="#"><i class="ion-heart"></i>57</a></li> -->
-									<!-- <li><a href="#"><i class="ion-chatbubble"></i>6</a></li> -->
-									<li><a href="#"><i class="ion-eye"></i>138</a></li>
-								</ul>
-
-							</div><!-- blog-info -->
+							<div class="blog-image">
+								<img src="images/img.png" alt="Blog Image">
+							</div>
+							</div> 
 						</div><!-- single-post -->
 					</div><!-- card -->
-				</div><!-- col-lg-4 col-md-6 -->
+<!-- col-lg-4 col-md-6 -->
 
 				<!-- ____________________________________________________ -->
 
