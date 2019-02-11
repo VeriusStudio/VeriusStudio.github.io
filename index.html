@@ -28,22 +28,7 @@
 	<link href="layout-1/css/responsive.css" rel="stylesheet">
 	
   </head>
-  <script type="text/javascript">
-function getTopOffset(e) { 
-	var y = 0;
-	do { y += e.offsetTop; } while (e = e.offsetParent);
-	return y;
-}
-var block = document.getElementById('fixblock'); /* fixblock - значение атрибута id блока */
-if ( null != block ) {
-	var topPos = getTopOffset( block );
-	window.onscroll = function() {
-		var newcss = (topPos < window.pageYOffset) ? 
-			'top:20px; position: fixed;' : 'position:static;';
-		block.setAttribute( 'style', newcss );
-	}
-}
-</script>
+  
   <body>
 
     <!-- <header >
@@ -124,7 +109,7 @@ if ( null != block ) {
 					<div class="card h-100">
 						<div class="single-post post-style-1">
 
-							<div class="blog-image"><img src="images/1.jpg" alt="Blog Image"></div>
+							<div class="blog-image"><img src="images/single-post-1/1.jpg" alt="Blog Image"></div>
 
 							<!-- <a class="avatar" href="#"><img src="images/icons8-team-355979.jpg" alt="Profile Image"></a> -->
 
@@ -148,7 +133,7 @@ if ( null != block ) {
 					<div class="card h-100">
 						<div class="single-post post-style-1">
 
-							<div class="blog-image"><img src="images/1.jpg" alt="Blog Image"></div>
+							<div class="blog-image"><img src="images/single-post-2/1.jpg" alt="Blog Image"></div>
 
 							<!-- <a class="avatar" href="#"><img src="images/icons8-team-355979.jpg" alt="Profile Image"></a> -->
 
